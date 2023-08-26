@@ -1,0 +1,89 @@
+@font-face {
+  src: url("fonts/regular.ttf");
+  font-family: "Condense";
+  font-weight: normal;
+}
+@font-face {
+  src: url("fonts/medium.ttf");
+  font-family: "Condense";
+  font-weight: bold;
+}
+
+body,button {
+  font-family: Condense;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  bottom: 10px;
+}
+nav div {
+  padding: 7px 12px;
+  margin-right: 5px;
+  background: #444;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.storyControl {
+  position: fixed;
+  text-align: center;
+  width: 95%;
+  background: #FFFFFFC0;
+}
+
+div#resources,
+div#evolution,
+div#story {
+  padding-bottom: 10px;
+}
+
+div#intellect {
+  display: flex;
+}
+
+#chapSel {
+  margin: 0px 10px;
+}
+
+dialog {
+  width: 300px;
+  animation: open 0.25s;
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+}
+.title {
+  background: #4200FF;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+#okbutton1b {
+  margin: 10px;
+}
+#message1b {
+  margin: 10px;
+}
+dialog::backdrop {
+  animation: appear 0.3s;
+}
+
+@keyframes open {
+  0% {
+    transform: scale(1.1,1.1);
+    opacity: 0%;
+  }
+  100% {
+    transform: scale(1,1);
+    opacity: 100%;
+  }
+}
+
+@keyframes appear {
+  0% {opacity: 0%}
+  100% {opacity: 100%;}
+}

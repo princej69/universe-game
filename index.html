@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Universe Game</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav>
+      <div onclick="showTab('resources')">Resources</div>
+      <div onclick="showTab('evolution')">Evolution</div>
+      <div onclick="showTab('story')">Story</div>
+    </nav>
+    <div id="resources">
+      <div id="intellect">
+        <button>Intellect</button>
+        <div id="intebar">
+          6.0s
+        </div>
+        <span id="intecount">0 / 15</span>
+      </div>
+    </div>
+    <div id="evolution">
+      <div class="row row1">
+        <div class="evo" id="evo0101">
+          Conscious
+          0 / 10
+          <button>Upgrade</button>
+        </div>
+      </div>
+    </div>
+    <div id="story">
+      <div class="storyControl">
+        <button>Prev</button><span id="chapSel">Chapter 1</span><button>Next</button>
+      </div>
+      <br>
+      <div class="chap1">
+        <p>Welcome new creator! You are going to take the path to create the universe, the life and more... Are you ready for this great adventure?</p>
+        <p id="c1v1">Paragraph locked</p>
+        <p id="c1v2">Paragraph locked</p>
+        <p id="c1v3">Paragraph locked</p>
+      </div>
+      <br>
+    </div>
+    <dialog id="onebuttondia">
+      <div class="title" id="title1b">Title</div>
+      <p id="message1b">Message</p>
+    </dialog>
+  </body>
+  <script src="js/shows.js"></script>
+  <script src="js/main.js"></script>
+</html>
