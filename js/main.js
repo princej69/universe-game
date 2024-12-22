@@ -8,16 +8,16 @@ let game = {
   },
   
   templeSpirit: {
-    quickMind: 2
+    quickMind: 10
   },
   
   evo: {
-    1: { // Chapter
-      1: 0, // Evolution in chapter
-      2: 0,
-      3: 0,
-      4: 0,
-    }
+    1: [ // Chapter
+      0, // Evolution in chapter
+      0,
+      0,
+      0,
+    ]
   },
   firstTime: true,
   lastTick: Date.now()
@@ -65,15 +65,24 @@ function addZero(n,z) {
 
 function buyEvo(chap,evo) {
   try {
-    if(game.intellect.count >= costs[chap][evo][0]){
-      if(game.evo[chap][evo] > maxes[chap][evo]) return;
-      if(game.evo[chap][evo] == 0) showDialog(`Chapter ${chap}.${evo}`,`${story[chap][evo-1]}`)
-      game.evo[chap][evo]++
-      game.intellect.count -= costs[chap][evo][0]
-      //document.getElementById("ohSound").play()
-      if(game.intellect.auto) intellectClick()
+    /*if(maxes[chap][evo] <= game.evo[chap][evo-1]) {
+      toast("Upgrade already mastered.")
+      return;
+      
+      game.evo[chap][evo-1] >= maxes[chap][evo]
+    }*/
+    if(game.evo[chap][evo-1] < maxes[chap][evo-1]){
+      if(game.intellect.count < costs[chap][evo-1][0]){
+        toast("Not enough resources")
+      } else {
+        if(game.evo[chap][evo-1] == 0) showDialog(`Chapter ${chap}.${evo}`,`${story[chap][evo-1]}`)
+        game.evo[chap][evo-1]++
+        game.intellect.count -= costs[chap][evo-1][0]
+        //document.getElementById("ohSound").play()
+        if(game.intellect.auto) intellectClick()
+      }
     } else {
-      toast("Not enough resources or mastered.")
+      toast("Upgrade already mastered")
     }
   } catch (e) {
     showDialog("Error",`Error occured: ${e}`)
@@ -88,12 +97,16 @@ function save() {
 function luck() {
   let rand = Math.random()
   
-  if (rand < 0.02) { // 2% Chance
-    showDialog("h","bdfnnemd")
+  if (rand < 0.01) { // 1% Chance
+    showDialog("You got message","Nothing happened.")
   }
 }
 
 showTab("resources")
-if(game.firstTime)showDialog("Quick Tutorial","At the beginning, your main action is to click on “Intellect” button. When you have enough Intellect, go to Evolution tab and upgrade your first Evolution.\n\nAs part of Early Access, you are given 2x speed, filled Intellects and a free Intellect Automation\n\nClick anywhere to close the dialog.")
+if(game.firstTime)showDialog("Quick Tutorial","At the beginning, your main action is to click on “Intellect” button. When you have enough Intellect, go to Evolution tab and upgrade your first Evolution.\n\nAs part of Early Access, you are given 2x speed, filled Intellects and a free Intellect Automation\n\nThis game is currently riddled with bugs. \"Game Saved\" doesn't actually save your game, it is purely for bragging.\n\nClick anywhere to close the dialog.")
 game.firstTime=false
 document.getElementById("lastTick").innerText = game.lastTick
+
+function checky(func) {
+  return `${func} is ${func}!`;
+}

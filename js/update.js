@@ -4,11 +4,11 @@ setInterval(()=>{
   ///intellect
    
   game.intellect.max = 20+
-   (game.evo[1][1]*3)+
-   (game.evo[1][3]*5);
+   (game.evo[1][0]*3)+
+   (game.evo[1][2]*5);
   
   game.intellect.cooldown = 6-
-   (game.evo[1][2]*0.5);
+   (game.evo[1][1]*0.5);
   // ui
   document.getElementById("lastTick").innerText = game.lastTick;
   /// resources
@@ -17,11 +17,11 @@ setInterval(()=>{
   /// evo
   //document.getElementById("evo0101c").innerText = `${game.evo[1][1]}/${maxes[1][0]}`
   for (let i = 1; i < 4; i++) {
-    document.getElementById(`evo1-${i}c`).innerText = `${game.evo[1][i]}/${maxes[1][i-1]}`
+    document.getElementById(`evo1-${i}c`).innerText = `${game.evo[1][i-1]}/${maxes[1][i-1]}`
   }
   /// story
   for (let i = 1; i < 7; i++) {
-    document.getElementById(`c1v${i}`).innerHTML = (game.evo[1][i] > 0 ? story[1][i-1] : "<span class='lockedParagraph'>Paragraph Locked<span>")
+    document.getElementById(`c1v${i}`).innerHTML = (game.evo[1][i-1] > 0 ? story[1][i-1] : "<span class='lockedParagraph'>Paragraph Locked<span>")
   }
 },100)
 

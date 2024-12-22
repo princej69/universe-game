@@ -24,6 +24,7 @@ function showTab(tab) {
   document.getElementById("resources").style.display = "none";
   document.getElementById("evolution").style.display = "none";
   document.getElementById("story").style.display = "none";
+  document.getElementById("settings").style.display = "none";
   document.getElementById(tab).style.display = "block";
 }
 
