@@ -1,5 +1,6 @@
 # Universe Game
 - Currently supports 1 chapter only
+- Useful if Universe Game isn’t available to you (iOS, etc.)
 
 # ATTENTION
 If you see all of items in one thing, REFRESH IT NOW.
@@ -12,7 +13,9 @@ You can modify the game files to add a new chapter, invent a new currency etc.
 
 ## Initial Nerfs
 - Intellect time reduced by 1 second.
-- Cost reduced by 5% (100 &gt; 95)
+- Cost reduced by 5% (100 &gt; 95).
+- Upgrades buffed.
+- Base increased.
 
 # Credits
 - Duplaa Laurent for the original Game, proud for making it in Sketchware

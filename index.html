@@ -10,22 +10,51 @@
       <div onclick="showTab('resources')">Resources</div>
       <div onclick="showTab('evolution')">Evolution</div>
       <div onclick="showTab('story')">Story</div>
+      <span class="dev" id="lastTick">Refresh Now.</span>
     </nav>
     <div id="resources">
       <div id="intellect">
-        <button>Intellect</button>
+        <button class="intebtn" onclick="intellectClick()">Intellect</button>
         <div id="intebar">
-          6.0s
+          <div id="intebar2">
+            <span id="intecool">6.0s</span>
+          </div>
         </div>
-        <span id="intecount">0 / 15</span>
+        <div id="intebar12">
+          <div id="intebar22">
+            <span id="intecount">0/20</span>
+          </div>
+        </div>
+      </div>
+      <div class="templeSpirit">
+        <b style="font-size: 20px;">Temple of the Spirit</b>
+        <div class="totsBody">
+          Inside :)
+        </div>
       </div>
     </div>
     <div id="evolution">
+      <div class="evoControl">
+        <button>Prev</button><span id="chapSel">Chapter 1</span><button>Next</button>
+      </div><div class="blankOver"></div>
       <div class="row row1">
-        <div class="evo" id="evo0101">
-          Conscious
-          0 / 10
-          <button>Upgrade</button>
+        <div class="evo evointe" id="evo0101">
+          Conscious <br>
+          <b>Cap +3</b>
+          <span id="evo1-1c">0/10</span>
+          <button onclick="buyEvo(1,1)">Upgrade</button>
+        </div>
+        <div class="evo evointe" id="evo0102">
+          Think <br>
+          <b>I -0.5s</b>
+          <span id="evo1-2c">0/10</span>
+          <button onclick="buyEvo(1,2)">Upgrade</button>
+        </div>
+        <div class="evo evointe" id="evo0103">
+          Intelligence <br>
+          <b>Cap +5</b>
+          <span id="evo1-3c">0/10</span>
+          <button onclick="buyEvo(1,3)">Upgrade</button>
         </div>
       </div>
     </div>
@@ -39,14 +68,26 @@
         <p id="c1v1">Paragraph locked</p>
         <p id="c1v2">Paragraph locked</p>
         <p id="c1v3">Paragraph locked</p>
+        <p id="c1v4">Paragraph locked</p>
+        <p id="c1v5">Paragraph locked</p>
+        <p id="c1v6">Paragraph locked</p>
       </div>
       <br>
     </div>
-    <dialog id="onebuttondia">
-      <div class="title" id="title1b">Title</div>
-      <p id="message1b">Message</p>
-    </dialog>
+    <div id="dialogs">
+      <dialog id="onebuttondia">
+        <div class="title" id="title1b">Title</div>
+        <p id="message1b">Message</p>
+      </dialog>
+    <div id="separateDialog">
+            
+
+    </div>
+    </div>
+    <audio src="js/oh.wav" id="ohSound"></audio>
   </body>
+  <script src="js/costs.js"></script>
   <script src="js/shows.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/update.js"></script>
 </html>

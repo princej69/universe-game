@@ -1,10 +1,23 @@
 const onebuttondia = document.getElementById("onebuttondia");
 
+function addTag(qr,tag,taq) { document.querySelector(qr).setAttribute(tag,taq) }
+function rmTag(qr,tag) { document.querySelector(qr).removeAttribute(tag) }
+
 function showDialog(t, m) {
+  onebuttondia.close()
   document.getElementById("title1b").innerText = t;
   document.getElementById("message1b").innerText = m;
 
   onebuttondia.showModal()
+}
+
+function toast(m) {
+  try{
+  document.getElementById("toast").remove()
+  }catch{}
+  let hshs = `<div id="toast" class="toast">${m}</div>`
+  document.getElementById("separateDialog").innerHTML += hshs;
+  
 }
 
 function showTab(tab) {
