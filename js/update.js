@@ -16,6 +16,9 @@ setInterval(()=>{
   document.getElementById("intebar22").style.width = `${(game.intellect.count/game.intellect.max)*100}%`;
   /// evo
   //document.getElementById("evo0101c").innerText = `${game.evo[1][1]}/${maxes[1][0]}`
+  for (let i = 2; i < 4; i++) {
+    document.getElementById(`evo1-${i}`).style.display = (game.evo[1][i-2]>0?"flex":"none")
+  }
   for (let i = 1; i < 4; i++) {
     document.getElementById(`evo1-${i}c`).innerText = `${game.evo[1][i-1]}/${maxes[1][i-1]}`
   }

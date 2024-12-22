@@ -14,6 +14,7 @@ body,button {
 }
 
 body {
+  background-color: black;
   background-image: url("chapImg/1.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -42,12 +43,15 @@ nav div {
 .storyControl, .evoControl {
   position: fixed;
   text-align: center;
+  top: 0;
+  padding: 10px 0px 10px 0px;
   width: 95%;
   background: #000000C0;
+  backdrop-filter: blur(4px);
 }
 
 .blankOver {
-  padding: 15px;
+  padding: 18px;
 }
 
 div#resources,
@@ -111,9 +115,9 @@ dialog::backdrop {
 
 @keyframes toast {
   0% {transform: scale(2,2) translateY(-0px);opacity:100%;filter: blur(5px)}
-  8% {transform: scale(1,1) translateY(-30px);filter: blur(0px)}
-  80% {transform: scale(1,1) translateY(-30px);filter: blur(0px);opacity:100%}
-  99.99% {opacity: 0%; transform: translateY(-30px)}
+  8% {transform: scale(1,1) translateY(-10px);filter: blur(0px)}
+  80% {transform: scale(1,1) translateY(-20px);filter: blur(0px);opacity:100%}
+  99.99% {opacity: 0%; transform: translateY(-20px)}
   100% {
     transform: translateY(999px)
   }
@@ -181,7 +185,8 @@ dialog::backdrop {
   text-align: center;
   background: #222222cc;
   animation: toast 5s;
-  backdrop-filter: blur(4px)
+  backdrop-filter: blur(4px);
+  transform: translateY(999px);
 }
 [showed="yes"] {
   
@@ -193,7 +198,7 @@ dialog::backdrop {
   margin-top: 10px;
   padding-top: 6px;
   padding: 6px 5px 5px 5px;
-  border-radius: 15px;
+  border-radius: 12px;
   background: #6d4c41;
   text-align: center;
 }
@@ -201,7 +206,7 @@ dialog::backdrop {
   text-align: left;
   margin-top: 5px;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 7px;
   min-height: 50px;
   padding: 5px;
   color: black;

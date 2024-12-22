@@ -8,7 +8,7 @@ let game = {
   },
   
   templeSpirit: {
-    quickMind: 10
+    quickMind: 2
   },
   
   evo: {
@@ -19,9 +19,12 @@ let game = {
       0,
     ]
   },
+  
   firstTime: true,
-  lastTick: Date.now()
+  lastTick: Date.now(),
+  lastVersion: 4
 }
+let gameVersion = 4
 
 function intellectClick() {
   let progsec = 0
@@ -91,7 +94,8 @@ function buyEvo(chap,evo) {
 }
 
 function save() {
-  toast("Game Saved")
+  let jsonString = JSON.stringify(game)
+  localStorage.setItem("universeGameSave",jsonString)
 }
 
 function luck() {
@@ -106,7 +110,7 @@ showTab("resources")
 if(game.firstTime)showDialog("Quick Tutorial","At the beginning, your main action is to click on “Intellect” button. When you have enough Intellect, go to Evolution tab and upgrade your first Evolution.\n\nAs part of Early Access, you are given 2x speed, filled Intellects and a free Intellect Automation\n\nThis game is currently riddled with bugs. \"Game Saved\" doesn't actually save your game, it is purely for bragging.\n\nClick anywhere to close the dialog.")
 game.firstTime=false
 document.getElementById("lastTick").innerText = game.lastTick
-
+if(game.lastVersion<gameVersion)showDialog("Game Update",`You last played this game on ${new Date(game.lastTick)}, when Build ${game.lastVersion} was still around. Some features may not work as expected, possibly due to missing game values.`)
 function checky(func) {
   return `${func} is ${func}!`;
 }
