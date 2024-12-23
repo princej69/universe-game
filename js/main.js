@@ -1,6 +1,6 @@
 let game = {
   intellect: {
-    count: 200,
+    count: 20,
     max: 20,
     cooldown: 6,
     dis: false,
