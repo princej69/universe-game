@@ -4,8 +4,10 @@ setInterval(()=>{
   ///intellect
    
   game.intellect.max = 20+
-   (game.evo[1][0]*3)+
-   (game.evo[1][2]*5);
+    (game.evo[1][0]*3)+
+   ((game.evo[1][2]+
+     game.evo[1][3]+
+     game.evo[1][4])*5);
   
   game.intellect.cooldown = 6-
    (game.evo[1][1]*0.5);
@@ -16,10 +18,10 @@ setInterval(()=>{
   document.getElementById("intebar22").style.width = `${(game.intellect.count/game.intellect.max)*100}%`;
   /// evo
   //document.getElementById("evo0101c").innerText = `${game.evo[1][1]}/${maxes[1][0]}`
-  for (let i = 2; i < 4; i++) {
+  for (let i = 2; i < 6; i++) {
     document.getElementById(`evo1-${i}`).style.display = (game.evo[1][i-2]>0?"flex":"none")
   }
-  for (let i = 1; i < 4; i++) {
+  for (let i = 1; i < 6; i++) {
     document.getElementById(`evo1-${i}c`).innerText = `${game.evo[1][i-1]}/${maxes[1][i-1]}`
   }
   /// story

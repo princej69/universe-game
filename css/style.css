@@ -170,9 +170,11 @@ dialog::backdrop {
   background: #1976d288;
   padding: 10px;
   border-radius: 15px;
+  margin-bottom: 5px; 
 }
 .row {
   display: flex;
+  flex-flow: row wrap;
 }
 .toast {
   position: fixed;

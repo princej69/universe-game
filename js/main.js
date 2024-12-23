@@ -1,6 +1,6 @@
 let game = {
   intellect: {
-    count: 20,
+    count: 200,
     max: 20,
     cooldown: 6,
     dis: false,
@@ -17,14 +17,15 @@ let game = {
       0,
       0,
       0,
+      0,
     ]
   },
   
   firstTime: true,
   lastTick: Date.now(),
-  lastVersion: 4
+  lastVersion: 5
 }
-let gameVersion = 4
+let gameVersion = 5
 
 function intellectClick() {
   let progsec = 0

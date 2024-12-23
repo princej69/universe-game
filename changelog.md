@@ -1,4 +1,11 @@
 # Changelog
+## v0.1.4 (5)
+Dec 23, 2024
+- Added two more upgrades
+- Hidden the Temple of Spirit from view because it serves no purpose as of now.
+- Increased the prices to what has shown in the original game. The 5% discount will still apply.
+- Some UI tweaks
+
 ## v0.1.3 (4)
 Dec 22, 2024
 - Added saving but loading is not yet implemented
