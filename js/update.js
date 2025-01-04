@@ -34,7 +34,8 @@ setInterval(()=>{
   save()
 },10000)
 setInterval(()=>{
-  luck( )
+  luck()
 },1000)
 
 if(game.intellect.auto)intellectClick()
+document.getElementById("loadtext").innerText="Wait..."

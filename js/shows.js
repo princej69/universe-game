@@ -1,5 +1,7 @@
 const onebuttondia = document.getElementById("onebuttondia");
 
+document.getElementById("loadtext").innerText="Initializing Functions"
+
 function addTag(qr,tag,taq) { document.querySelector(qr).setAttribute(tag,taq) }
 function rmTag(qr,tag) { document.querySelector(qr).removeAttribute(tag) }
 

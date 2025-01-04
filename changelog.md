@@ -1,4 +1,11 @@
 # Changelog
+## v0.1.5 (6)
+Jan 3, 2025
+- Added loading screen so there will be no spoilers
+- Added `load()`
+- ~~Decided to add sounds (ignore the oh sound)~~
+- Fixed some bugs
+
 ## v0.1.4 (5)
 Dec 23, 2024
 - Added two more upgrades

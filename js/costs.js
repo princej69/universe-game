@@ -26,3 +26,5 @@ let story = {
     "With the dexterity of an alchemist, you decide to move the tiny matter from side to side. Once, you heard that an explosion could be the collision of energy and matter. So, moving quickly this matter in this very hot Void, you’re hoping for something to happen.",
   ]
 }
+
+document.getElementById("loadtext").innerText="Fetching Upgrades"
